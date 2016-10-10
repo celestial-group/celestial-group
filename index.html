@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Celestial Group</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="/bower_components/fullpage.js/jquery.fullPage.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section">Some section 1</div>
+      <div class="section">Some section 2</div>
+      <div class="section">Some section 3</div>
+      <div class="section">Some section 4</div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#fullpage').fullpage({
+          navigation: true,
+          navigationPosition:'right',
+          navigationTooltips:['Vision','Faster','Smarter','Cheaper'],
+          showActiveTooltip: true,
+          sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FFCC00']
+        });
+      });
+    </script>
+  </body>
+</html>
