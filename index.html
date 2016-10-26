@@ -2,7 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Celestial Group</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="/bower_components/fullpage.js/jquery.fullPage.css">
     <link rel="stylesheet" href="index.css">
@@ -10,20 +13,91 @@
     <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
   </head>
   <body>
-    <div id="fullpage">
-      <div class="section">Some section 1</div>
-      <div class="section">Some section 2</div>
-      <div class="section">Some section 3</div>
-      <div class="section">Some section 4</div>
+    <div id="fullpage" class="container-fluid">
+      <div class="section" id="introduction">
+        <div class="time">8:00-8:30</div>
+        <div class="row">
+          <div class="navigation col-sm-6">
+            <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJ2b2yeLWvEmsRQMQyFmh9AQU&destination=place_id:ChIJC1pngUGuEmsRgfJQSnM4nLI&key=AIzaSyDwE-vi8FZjwHJl71keTuEpElalbZt_vEg" allowfullscreen></iframe>
+          </div>
+          <div class="dialogue-box col-sm-6">
+            <p>
+            A sunny morning! John, a newly graduated civil engineer
+            ,wakes up at 8 in the morning in a
+            small apartment located in North Sydney. He has a busy day ahead of him.
+             He needs to arrive at the CBD office by 9:00. After a quick breakfast,
+             he goes straight to his driverless car and starts the engine...
+           </p>
+          </div>
+        </div>
+       </div>
+      <div class="section" id="blend-zone">
+        <div class="time">8:30-8:32</div>
+        <div class="row">
+          <div class="dialogue-box col-sm-6">
+            <p>Before getting on the M1 Motorway, the car needs to navigate itself
+              through several residential roads. Except in the designated driverless
+               car zone, the residential roads are shared by driverless cars and normal vehicles.
+             It means that John's fancy new car still needs to obey the current traffic rules like
+           traffic lights and stop signs. Not the most fancy way to use a driverless car,
+           but as more driverless zones gradually roll out, the situation will be much better.
+            <a href='#'>Click to see how the driverless zones are managed</a>
+          </p>
+          </div>
+        <div class="col-sm-6">
+          <img src="/img/stop_sign.jpg" alt="Stop Sign" class="img-responsive">
+        </div>
+        </div>
+      </div>
+      <div class="section" id="dynamic-toll">
+        <div class="time">8:32-8:38</div>
+        <div class="row">
+          <div class="col-sm-6">
+            <p>The car is on the motorway! Before getting on the motorway,
+              John has told the smart vehicle that the maximum toll he wants
+              to pay is $5. The vehicle, bears that in its "mind", decides which
+              lane to use to get John to the destination as quickly as possible
+              while under budget. The price of each lane is diffrent. And it is
+              based on the target lane speed and current congestion level.
+              The prices are broadcasted to the vehicle's navigation system.
+              And the vehicle can make its own decision about lane usages.
+              John has nothing to worry on the motorway except
+              that picturesque view that he can enjoy while the car is driving itself
+              through the harbour bridge.</p>
+          </div>
+          <div class="col-sm-6">
+          </div>
+        </div>
+      </div>
+      <div class="section" id="driverless-zone">
+        <div class="time">8:38-8:40</div>
+        <div class="row">
+          <div class="dialogue-box col-sm-6">
+            <p>Finally the center of the metropolis. To maximum traffic flow,
+              Sydney CBD is one of the first zones that have been designated
+              as Driverless Zones. Only Driverless Vehicles are allowed.
+              With the implementation of Autonomous Intersection Management System.
+              The processing rate of the existing intersections have been doubled.
+              The speed limit is also raised due to a reduction in the perception/reaction time of the vehicles.
+              The result? Only two minutes for John to sprint from motorway exit to the office parking lot.
+            </p>
+          </div>
+          <div class="col-sm-6">
+          </div>
+        </div>
+      </div>
+      <div class="section" id="calculator">
+      </div>
     </div>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
         $('#fullpage').fullpage({
           navigation: true,
           navigationPosition:'right',
-          navigationTooltips:['Vision','Faster','Smarter','Cheaper'],
+          navigationTooltips:['Introduction','Blend Zone','Dynamic Toll','Driverless Zone','Calculator'],
           showActiveTooltip: true,
-          sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FFCC00']
+          sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FFCC00','#1bbc9b']
         });
       });
     </script>

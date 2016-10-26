@@ -1,3 +1,35 @@
 html{
   font-family: 'Roboto', sans-serif !important;
 }
+
+body{
+  font-size: 18px;
+  line-height: 1.4446;
+  font-weight: 400;
+  letter-spacing: 0em;
+  background-color: #fff;
+  color: #333;
+  font-style: normal;
+}
+
+.section{
+  padding: 20px;
+}
+
+.time{
+  font-size: 48px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#fullpage.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+p{
+  margin-bottom: 8px;
+}
+
+p{
+  margin: 0 0 1em 0;
+}
