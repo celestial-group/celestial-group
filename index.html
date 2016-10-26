@@ -88,24 +88,52 @@
               The speed limit is also raised due to a reduction in the perception/reaction time of the vehicles.
               The result? Only two minutes for John to sprint from motorway exit to the office parking lot.
             </p>
-            <h2>Intersection Design</h2>
-            <video id="example_video_1" class="video-js vjs-default-skin"
-              controls preload="auto" autoplay width="500" height="200"
-              data-setup='{}' src="/video/intersection-design.mp4">
-            </video>
           </div>
           <div class="col-sm-6 vcenter">
-            <h2>AMI System</h2>
+            <h2>AIM System</h2>
             <video id="example_video_1" class="video-js vjs-default-skin"
-              controls preload="auto" autoplay width="500" height="200"
-              data-setup='{}' src="/video/dynamic-toll.mp4">
+              controls preload="auto" autoplay width="500" height="280"
+              data-setup='{}' src="/video/AIM.mp4">
             </video>
+            <p>Two lanes each direction, 55 km/h speed limit, Total Vehicles Processed in 150 sec: 190</p>
           </div>
         </div>
       </div>
       <div class="section">
+        <div class="time">Intersection Design</div>
+        <div class="col-sm-6">
+          <p>
+            In order to make the AIM works, pedestrians cannot cross the roads.
+            So pedestrian bridge and tunnel are created to help them get to the
+            other side of the road.
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <video id="example_video_1" class="video-js vjs-default-skin"
+            controls preload="auto" autoplay width="500" height="280"
+            data-setup='{}' src="/video/intersection-design.mp4">
+          </video>
+        </div>
+      </div>
+      <div class="section">
+        <div class="time">Parking Lot</div>
+        <div class="col-sm-6">
+          <p>
+            Because Driverless Zone marks the end of the Manually Driven Vehicles/Manually Driven Mode,
+            a special Parking Lot is created for the drivers to switch the mode
+            to fully automatic or park their cars and transit to autonomous public
+            transport.
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <video id="example_video_1" class="video-js vjs-default-skin"
+            controls preload="auto" autoplay width="500" height="280"
+            data-setup='{}' src="/video/parking-lot.mp4">
+          </video>
+        </div>
       </div>
       <div class="section" id="calculator">
+        <div class="time">How much time you can save in the future?</div>
       </div>
     </div>
     <script src="/bower_components/video.js/dist/video.min.js"></script>
@@ -115,9 +143,9 @@
         $('#fullpage').fullpage({
           navigation: true,
           navigationPosition:'right',
-          navigationTooltips:['Introduction','Blend Zone','Dynamic Toll','Driverless Zone','Parking Lot','Calculator'],
+          navigationTooltips:['Introduction','Blend Zone','Dynamic Toll','Driverless Zone','Intersection Design','Parking Lot','Calculator'],
           showActiveTooltip: true,
-          sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FFCC00','#4BBFC3','#1bbc9b']
+          sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FFCC00','#7BAABE','#4BBFC3','#1bbc9b']
         });
       });
     </script>
