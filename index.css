@@ -38,3 +38,9 @@ p{
   width: 623 !important;
   height: 360 !important;
 }
+
+.vcenter{
+  display: inline-block;
+  /*float: none;*/
+  vertical-align: middle;
+}
