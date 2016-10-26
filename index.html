@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="/bower_components/fullpage.js/jquery.fullPage.css">
+    <link rel="stylesheet" href="/bower_components/video.js/dist/video-js.min.css" media="screen" title="no title">
     <link rel="stylesheet" href="index.css">
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
+    <script src="/bower_components/isInViewport/lib/isInViewport.min.js"></script>
+    <script src="/bower_components/video.js/dist/ie8/videojs-ie8.min.js"></script>
   </head>
   <body>
     <div id="fullpage" class="container-fluid">
@@ -18,13 +21,13 @@
         <div class="time">8:00-8:30</div>
         <div class="row">
           <div class="navigation col-sm-6">
-            <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJ2b2yeLWvEmsRQMQyFmh9AQU&destination=place_id:ChIJC1pngUGuEmsRgfJQSnM4nLI&key=AIzaSyDwE-vi8FZjwHJl71keTuEpElalbZt_vEg" allowfullscreen></iframe>
+            <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJu26vuTymEmsRfGE1-vZHs0w&destination=place_id:ChIJC1pngUGuEmsRgfJQSnM4nLI&key=AIzaSyDwE-vi8FZjwHJl71keTuEpElalbZt_vEg" allowfullscreen></iframe>
           </div>
           <div class="dialogue-box col-sm-6">
             <p>
             A sunny morning! John, a newly graduated civil engineer
             ,wakes up at 8 in the morning in a
-            small apartment located in North Sydney. He has a busy day ahead of him.
+            small apartment located in West Pymble. He has a busy day ahead of him.
              He needs to arrive at the CBD office by 9:00. After a quick breakfast,
              he goes straight to his driverless car and starts the engine...
            </p>
@@ -35,7 +38,7 @@
         <div class="time">8:30-8:32</div>
         <div class="row">
           <div class="dialogue-box col-sm-6">
-            <p>Before getting on the M1 Motorway, the car needs to navigate itself
+            <p>Before getting on the Motorway, the car needs to navigate itself
               through several residential roads. Except in the designated driverless
                car zone, the residential roads are shared by driverless cars and normal vehicles.
              It means that John's fancy new car still needs to obey the current traffic rules like
@@ -66,6 +69,12 @@
               through the harbour bridge.</p>
           </div>
           <div class="col-sm-6">
+            <video class="video-js" src="/video/dynamic-toll.mp4" controls preload="auto" autoplay width="640" height="264">
+              <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+              </p>
+            </video>
           </div>
         </div>
       </div>
@@ -86,18 +95,21 @@
           </div>
         </div>
       </div>
+      <div class="section">
+      </div>
       <div class="section" id="calculator">
       </div>
     </div>
+    <script src="/bower_components/video.js/dist/video.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
         $('#fullpage').fullpage({
           navigation: true,
           navigationPosition:'right',
-          navigationTooltips:['Introduction','Blend Zone','Dynamic Toll','Driverless Zone','Calculator'],
+          navigationTooltips:['Introduction','Blend Zone','Dynamic Toll','Driverless Zone','Parking Lot','Calculator'],
           showActiveTooltip: true,
-          sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FFCC00','#1bbc9b']
+          sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FFCC00','#4BBFC3','#1bbc9b']
         });
       });
     </script>

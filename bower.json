@@ -16,6 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "boostrap#^3.3.7"
+    "bootstrap": "boostrap#^3.3.7",
+    "isInViewport": "^2.4.2",
+    "video.js": "^5.12.6"
   }
 }
