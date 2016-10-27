@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Celestial Group</title>
-  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="/bower_components/fullpage.js/jquery.fullPage.css">
-  <link rel="stylesheet" href="index.css">
-  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Celestial Group</title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="/bower_components/fullpage.js/jquery.fullPage.css">
+    <link rel="stylesheet" href="/bower_components/video.js/dist/video-js.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="index.css">
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
+    <script src="/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="/bower_components/isInViewport/lib/isInViewport.min.js"></script>
+    <script src="/bower_components/video.js/dist/ie8/videojs-ie8.min.js"></script>
+  </head>
   <body>
-    <div class="container">
-   <div class="row">
-       <div class="col-md-4">
-          <a href="">About</a>
-       </div>
-       <div class="col-md-4">
-          <p>A</p>
-       </div>
-       <div class="col-md-4">
-           <a href="#myModal1" data-toggle="modal">SHARE</a>
-       </div>
+    <div id="fullpage" class="container-fluid">
+      <div class="section" id="introduction">
+      </div>
+      <div class="section" id="blend-zone">
+      </div>
+      <div class="section" id="dynamic-toll">
+      </div>
+      <div class="section" id="driverless-zone">
+      </div>
+      <div class="section">
+      </div>
+      <div class="section">
+      </div>
+      <div class="section" id="calculator">
+      </div>
     </div>
-</div>
+    <script src="/bower_components/video.js/dist/video.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#fullpage').fullpage({
+          navigation: true,
+          navigationPosition:'right',
+          navigationTooltips:['Introduction','Blend Zone','Dynamic Toll','AIM','Intersection','Parking Lot','Calculator'],
+          showActiveTooltip: true,
+          sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FFCC00','#7BAABE','#4BBFC3','#1bbc9b']
+        });
+      });
+    </script>
   </body>
 </html>
