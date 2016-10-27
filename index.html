@@ -15,6 +15,62 @@
     <script src="/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="/bower_components/isInViewport/lib/isInViewport.min.js"></script>
     <script src="/bower_components/video.js/dist/ie8/videojs-ie8.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#fullpage').fullpage({
+          navigation: true,
+          navigationPosition:'right',
+          navigationTooltips:['Introduction','Blend Zone','Dynamic Toll','AIM','Intersection','Parking Lot','Calculator'],
+          showActiveTooltip: true,
+          sectionsColor: ['#1bbc9b', '#4BBFC3','#7BAABE', '#FFCC00','#7BAABE','#4BBFC3','#1bbc9b']
+        });
+
+        var waypoints = $('#').waypoint(function(direction) {
+          notify(this.element.id + ' hit')
+        });
+
+        var motorwayMin = 20;
+        var CBDMin = 10;
+
+        var minToDay = function(min){
+          var res={};
+          res.days = Math.floor(min/(24*60));
+          res.hours = Math.floor((min-res.days*24*60)/60);
+          res.minutes = Math.floor(min-res.days*24*60-res.hours*60)+1;
+          return res;
+        };
+
+        var updateYearResult = function(res,yearResult){
+          $('#day-result').text(res.days);
+          $('#hour-result').text(res.hours);
+          $('#min-result').text(res.minutes);
+          $('#dollar-result').text(Math.floor(yearResult*29.22/60));
+          $('#NBA-result').text(Math.floor(yearResult/120));
+          $('#flight-result').text(Math.round( yearResult/1229 * 10 ) / 10);
+        };
+
+
+        var result = 0.3*motorwayMin + 0.5*CBDMin;
+        $('#result').text(Math.round(result*10)/10);
+
+        var yearResult = result*365*2;
+        updateYearResult(minToDay(yearResult),yearResult);
+
+
+        $('input').change(function(){
+          var motorwayMin = $('#motorway').val();
+          var CBDMin = $('#CBD').val();
+
+          var result = 0.3*motorwayMin + 0.5*CBDMin;
+          $('#result').text(Math.round(result*10)/10);
+
+          var yearResult = result*365*2;
+
+          updateYearResult(minToDay(yearResult),yearResult);
+
+        });
+      });
+    </script>
   </head>
   <body>
     <div id="fullpage" class="">
@@ -173,61 +229,5 @@
     </div>
     <script src="/bower_components/video.js/dist/video.min.js"></script>
     <!--script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script-->
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('#fullpage').fullpage({
-          navigation: true,
-          navigationPosition:'right',
-          navigationTooltips:['Introduction','Blend Zone','Dynamic Toll','AIM','Intersection','Parking Lot','Calculator'],
-          showActiveTooltip: true,
-          sectionsColor: ['#1bbc9b', '#4BBFC3','#7BAABE', '#FFCC00','#7BAABE','#4BBFC3','#1bbc9b']
-        });
-
-        var waypoints = $('#').waypoint(function(direction) {
-          notify(this.element.id + ' hit')
-        });
-
-        var motorwayMin = 20;
-        var CBDMin = 10;
-
-        var minToDay = function(min){
-          var res={};
-          res.days = Math.floor(min/(24*60));
-          res.hours = Math.floor((min-res.days*24*60)/60);
-          res.minutes = Math.floor(min-res.days*24*60-res.hours*60)+1;
-          return res;
-        };
-
-        var updateYearResult = function(res,yearResult){
-          $('#day-result').text(res.days);
-          $('#hour-result').text(res.hours);
-          $('#min-result').text(res.minutes);
-          $('#dollar-result').text(Math.floor(yearResult*29.22/60));
-          $('#NBA-result').text(Math.floor(yearResult/120));
-          $('#flight-result').text(Math.round( yearResult/1229 * 10 ) / 10);
-        };
-
-
-        var result = 0.3*motorwayMin + 0.5*CBDMin;
-        $('#result').text(Math.round(result*10)/10);
-
-        var yearResult = result*365*2;
-        updateYearResult(minToDay(yearResult),yearResult);
-
-
-        $('input').change(function(){
-          var motorwayMin = $('#motorway').val();
-          var CBDMin = $('#CBD').val();
-
-          var result = 0.3*motorwayMin + 0.5*CBDMin;
-          $('#result').text(Math.round(result*10)/10);
-
-          var yearResult = result*365*2;
-
-          updateYearResult(minToDay(yearResult),yearResult);
-
-        });
-      });
-    </script>
   </body>
 </html>
