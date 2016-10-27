@@ -17,119 +17,136 @@
     <script src="/bower_components/video.js/dist/ie8/videojs-ie8.min.js"></script>
   </head>
   <body>
-    <div id="fullpage" class="container-fluid">
+    <div id="fullpage" class="">
       <div class="section" id="introduction">
-        <div class="time">8:00-8:30</div>
-        <div class="row">
-          <div class="navigation col-sm-6">
-            <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJu26vuTymEmsRfGE1-vZHs0w&destination=place_id:ChIJC1pngUGuEmsRgfJQSnM4nLI&key=AIzaSyDwE-vi8FZjwHJl71keTuEpElalbZt_vEg" allowfullscreen></iframe>
-          </div>
-          <div class="dialogue-box col-sm-6">
-            <p>
-            A sunny morning! John, a newly graduated civil engineer
-            ,wakes up at 8 in the morning in a
-            small apartment located in West Pymble. He has a busy day ahead of him.
-             He needs to arrive at the CBD office by 9:00. After a quick breakfast,
-             he goes straight to his driverless car and starts the engine...
-           </p>
+        <div class="container-fluid">
+          <div class="time">8:00-8:30</div>
+          <div class="row">
+            <div class="navigation col-sm-6">
+              <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJu26vuTymEmsRfGE1-vZHs0w&destination=place_id:ChIJC1pngUGuEmsRgfJQSnM4nLI&key=AIzaSyDwE-vi8FZjwHJl71keTuEpElalbZt_vEg" allowfullscreen></iframe>
+            </div>
+            <div class="dialogue-box col-sm-6">
+              <p>
+              A sunny morning! John, a newly graduated civil engineer
+              ,wakes up at 8 in the morning in a
+              small apartment located in West Pymble. He has a busy day ahead of him.
+               He needs to arrive at the CBD office by 9:00. After a quick breakfast,
+               he goes straight to his driverless car and starts the engine...
+             </p>
+            </div>
           </div>
         </div>
-       </div>
+      </div>
       <div class="section" id="blend-zone">
-        <div class="time">8:30-8:32</div>
-        <div class="row">
-          <div class="dialogue-box col-sm-6">
-            <p>Before getting on the Motorway, the car needs to navigate itself
-              through several residential roads. Except in the designated driverless
-               car zone, the residential roads are shared by driverless cars and normal vehicles.
-             It means that John's fancy new car still needs to obey the current traffic rules like
-           traffic lights and stop signs. Not the most fancy way to use a driverless car,
-           but as more driverless zones gradually roll out, the situation will be much better.
-          </p>
+        <div class="container-fluid">
+          <div class="time">8:30-8:32</div>
+          <div class="row">
+            <div class="dialogue-box col-sm-6">
+              <p>Before getting on the Motorway, the car needs to navigate itself
+                through several residential roads. Except in the designated driverless
+                 car zone, the residential roads are shared by driverless cars and normal vehicles.
+               It means that John's fancy new car still needs to obey the current traffic rules like
+             traffic lights and stop signs. Not the most fancy way to use a driverless car,
+             but as more driverless zones gradually roll out, the situation will be much better.
+            </p>
+            </div>
+          <div class="col-sm-6">
+            <img src="/img/driverless.png" alt="Autopilot" class="img-responsive">
           </div>
-        <div class="col-sm-6">
-          <img src="/img/driverless.png" alt="Autopilot" class="img-responsive">
-        </div>
+          </div>
         </div>
       </div>
       <div class="section" id="dynamic-toll">
-        <div class="time">8:32-8:38</div>
-        <div class="row">
-          <div class="col-sm-6">
-            <p>The car is on the motorway! Before getting on the motorway,
-              John has told the smart vehicle that the maximum toll he wants
-              to pay is $5. The vehicle, bears that in its "mind", decides which
-              lane to use to get John to the destination as quickly as possible
-              while under budget. The price of each lane is diffrent. And it is
-              based on the target lane speed and current congestion level.
-              The prices are broadcasted to the vehicle's navigation system.
-              And the vehicle can make its own decision about lane usages.
-              John has nothing to worry on the motorway except
-              that picturesque view that he can enjoy while the car is driving itself
-              through the harbour bridge.</p>
-          </div>
-          <div class="col-sm-6">
-            <video id="example_video_1" class="video-js vjs-default-skin"
-              controls loop preload="auto" autoplay width="500" height="280"
-              data-setup='{}' src="/video/dynamic-toll.mp4">
-            </video>
+        <div class="container-fluid">
+          <div class="time">8:32-8:38</div>
+          <div class="row">
+            <div class="col-sm-6">
+              <p>The car is on the motorway! Before getting on the motorway,
+                John has told the smart vehicle that the maximum toll he wants
+                to pay is $5. The vehicle, bears that in its "mind", decides which
+                lane to use to get John to the destination as quickly as possible
+                while under budget. The price of each lane is diffrent. And it is
+                based on the target lane speed and current congestion level.
+                The prices are broadcasted to the vehicle's navigation system.
+                And the vehicle can make its own decision about lane usages.
+                John has nothing to worry on the motorway except
+                that picturesque view that he can enjoy while the car is driving itself
+                through the harbour bridge.</p>
+            </div>
+            <div class="col-sm-6">
+              <video id="example_video_1" class="video-js vjs-default-skin"
+                controls loop preload="auto" autoplay width="500" height="280"
+                data-setup='{}' src="/video/dynamic-toll.mp4">
+              </video>
+            </div>
           </div>
         </div>
       </div>
       <div class="section" id="driverless-zone">
-        <div class="time">8:38-8:40</div>
-        <div class="row">
-          <div class="dialogue-box col-sm-6 vcenter">
-            <p>Finally the center of the metropolis. To maximum traffic flow,
-              Sydney CBD is one of the first zones that have been designated
-              as Driverless Zones. Only Driverless Vehicles are allowed.
-              With the implementation of Autonomous Intersection Management System.
-              The processing rate of the existing intersections have been doubled.
-              The speed limit is also raised due to a reduction in the perception/reaction time of the vehicles.
-              The result? Only two minutes for John to sprint from motorway exit to the office parking lot.
-            </p>
-          </div>
-          <div class="col-sm-6 vcenter">
-            <h2>AIM System</h2>
-            <video id="example_video_1" class="video-js vjs-default-skin"
-              controls loop preload="auto" autoplay width="500" height="280"
-              data-setup='{}' src="/video/AIM.mp4">
-            </video>
-            <p>Two lanes each direction, 55 km/h speed limit, Total Vehicles Processed in 150 sec: 190</p>
+        <div class="container-fluid">
+          <div class="time">8:38-8:40</div>
+          <div class="row">
+            <div class="dialogue-box col-sm-6 vcenter">
+              <p>Finally the center of the metropolis. To maximum traffic flow,
+                Sydney CBD is one of the first zones that have been designated
+                as Driverless Zones. Only Driverless Vehicles are allowed.
+                With the implementation of Autonomous Intersection Management System.
+                The processing rate of the existing intersections have been doubled.
+                The speed limit is also raised due to a reduction in the perception/reaction time of the vehicles.
+                The result? Only two minutes for John to sprint from motorway exit to the office parking lot.
+              </p>
+            </div>
+            <div class="col-sm-6 vcenter">
+              <h2>AIM System</h2>
+              <video id="example_video_1" class="video-js vjs-default-skin"
+                controls loop preload="auto" autoplay width="500" height="280"
+                data-setup='{}' src="/video/AIM.mp4">
+              </video>
+              <p>Two lanes each direction, 55 km/h speed limit, Total Vehicles Processed in 150 sec: 190</p>
+            </div>
           </div>
         </div>
       </div>
       <div class="section">
-        <div class="time">Intersection Design</div>
-        <div class="col-sm-6">
-          <p>
-            In order to make the AIM works, pedestrians cannot cross the roads.
-            So pedestrian bridge and tunnel are created to help them get to the
-            other side of the road.
-          </p>
-        </div>
-        <div class="col-sm-6">
-          <video id="example_video_1" class="video-js vjs-default-skin"
-            controls loop preload="auto" autoplay width="500" height="280"
-            data-setup='{}' src="/video/intersection-design.mp4">
-          </video>
+        <div class="container-fluid">
+          <div class="time">Intersection Design</div>
+          <div class="row">
+            <div class="col-sm-6">
+              <p>
+                In order to make the AIM works, pedestrians cannot cross the roads.
+                So pedestrian bridge and tunnel are created to help them get to the
+                other side of the road.
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <video id="example_video_1" class="video-js vjs-default-skin"
+                controls loop preload="auto" autoplay width="500" height="280"
+                data-setup='{}' src="/video/intersection-design.mp4">
+              </video>
+            </div>
+          </div>
         </div>
       </div>
       <div class="section">
-        <div class="time">Parking Lot</div>
-        <div class="col-sm-6">
-          <p>
-            Because Driverless Zone marks the end of the Manually Driven Vehicles/Manually Driven Mode,
-            a special Parking Lot is created for the drivers to switch the mode
-            to fully automatic or park their cars and transit to autonomous public
-            transport.
-          </p>
-        </div>
-        <div class="col-sm-6">
-          <video id="example_video_1" class="video-js vjs-default-skin"
-            controls loop preload="auto" autoplay width="500" height="280"
-            data-setup='{}' src="/video/parking-lot.mp4">
-          </video>
+        <div class="container-fluid">
+          <div class="time">Parking Lot</div>
+          <div class="row">
+            <div class="col-sm-6">
+              <p>
+                Because Driverless Zone marks the end of the Manually Driven Vehicles/Manually Driven Mode,
+                a special Parking Lot is created for the drivers to switch the mode
+                to fully automatic or park their cars and transit to autonomous public
+                transport.
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <video id="example_video_1" class="video-js vjs-default-skin"
+                controls loop preload="auto" autoplay width="500" height="280"
+                data-setup='{}' src="/video/parking-lot.mp4">
+              </video>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="section" id="calculator">
