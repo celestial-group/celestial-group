@@ -84,3 +84,7 @@ input.box{
     /* If max-width does not work, try using width instead */
     width: 200px !important; 
 }
+
+.col-sm-8{
+  padding-top:100px !important;
+}
