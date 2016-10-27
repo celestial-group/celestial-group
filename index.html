@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="index.css">
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
+    <script src="/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="/bower_components/isInViewport/lib/isInViewport.min.js"></script>
     <script src="/bower_components/video.js/dist/ie8/videojs-ie8.min.js"></script>
   </head>
@@ -70,7 +71,7 @@
           </div>
           <div class="col-sm-6">
             <video id="example_video_1" class="video-js vjs-default-skin"
-              controls preload="auto" autoplay width="500" height="280"
+              controls loop preload="auto" autoplay width="500" height="280"
               data-setup='{}' src="/video/dynamic-toll.mp4">
             </video>
           </div>
@@ -92,7 +93,7 @@
           <div class="col-sm-6 vcenter">
             <h2>AIM System</h2>
             <video id="example_video_1" class="video-js vjs-default-skin"
-              controls preload="auto" autoplay width="500" height="280"
+              controls loop preload="auto" autoplay width="500" height="280"
               data-setup='{}' src="/video/AIM.mp4">
             </video>
             <p>Two lanes each direction, 55 km/h speed limit, Total Vehicles Processed in 150 sec: 190</p>
@@ -110,7 +111,7 @@
         </div>
         <div class="col-sm-6">
           <video id="example_video_1" class="video-js vjs-default-skin"
-            controls preload="auto" autoplay width="500" height="280"
+            controls loop preload="auto" autoplay width="500" height="280"
             data-setup='{}' src="/video/intersection-design.mp4">
           </video>
         </div>
@@ -127,13 +128,32 @@
         </div>
         <div class="col-sm-6">
           <video id="example_video_1" class="video-js vjs-default-skin"
-            controls preload="auto" autoplay width="500" height="280"
+            controls loop preload="auto" autoplay width="500" height="280"
             data-setup='{}' src="/video/parking-lot.mp4">
           </video>
         </div>
       </div>
       <div class="section" id="calculator">
         <div class="time">How much time you can save in the future?</div>
+        <div class="row">
+          <div class="col-sm-8">
+            <p class="inline">If you spend</p>
+              <div class="input-group">
+                <input type="text" class="box" placeholder="20" aria-describedby="basic-addon2" id="motorway" autofocus>
+              </div>
+            <p class="inline">minutes driving on motorway and</p>
+            <div class="input-group">
+              <input type="text" class="box" placeholder="10" aria-describedby="basic-addon2" id="CBD">
+            </div>
+            <p class="inline"> minutes driving in CBD <b>per</b> trip, then you can save</p>
+            <span class="box" id="result"></span>
+            <p class="inline">minutes per trip or <span class="box" id="day-result"></span> days and <span class="box" id="hour-result"></span> hours and <span class="box" id="min-result"></span>
+             minutes per year (daily round-trip). That is equal to <span class="box" id="dollar-result"></span> dollars (based on Avg. Salary) or watching <span class="box" id="NBA-result"></span> NBA Basketball Games</p> or fly between Sydney and New York <span class="box" id="flight-result"></span> times.
+
+          </div>
+          <div class="col-sm-4">
+          </div>
+        </div>
       </div>
     </div>
     <script src="/bower_components/video.js/dist/video.min.js"></script>
@@ -143,9 +163,54 @@
         $('#fullpage').fullpage({
           navigation: true,
           navigationPosition:'right',
-          navigationTooltips:['Introduction','Blend Zone','Dynamic Toll','Driverless Zone','Intersection Design','Parking Lot','Calculator'],
+          navigationTooltips:['Introduction','Blend Zone','Dynamic Toll','AIM','Intersection','Parking Lot','Calculator'],
           showActiveTooltip: true,
           sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FFCC00','#7BAABE','#4BBFC3','#1bbc9b']
+        });
+
+        var waypoints = $('#handler-only').waypoint(function(direction) {
+          notify(this.element.id + ' hit')
+        });
+
+        var motorwayMin = 20;
+        var CBDMin = 10;
+
+        var minToDay = function(min){
+          var res={};
+          res.days = Math.floor(min/(24*60));
+          res.hours = Math.floor((min-res.days*24*60)/60);
+          res.minutes = Math.floor(min-res.days*24*60-res.hours*60)+1;
+          return res;
+        };
+
+        var updateYearResult = function(res,yearResult){
+          $('#day-result').text(res.days);
+          $('#hour-result').text(res.hours);
+          $('#min-result').text(res.minutes);
+          $('#dollar-result').text(Math.floor(yearResult*29.22/60));
+          $('#NBA-result').text(Math.floor(yearResult/120));
+          $('#flight-result').text(Math.round( yearResult/1229 * 10 ) / 10);
+        };
+
+
+        var result = 0.3*motorwayMin + 0.5*CBDMin;
+        $('#result').text(Math.round(result*10)/10);
+
+        var yearResult = result*365*2;
+        updateYearResult(minToDay(yearResult),yearResult);
+
+
+        $('input').change(function(){
+          var motorwayMin = $('#motorway').val();
+          var CBDMin = $('#CBD').val();
+
+          var result = 0.3*motorwayMin + 0.5*CBDMin;
+          $('#result').text(Math.round(result*10)/10);
+
+          var yearResult = result*365*2;
+
+          updateYearResult(minToDay(yearResult),yearResult);
+
         });
       });
     </script>

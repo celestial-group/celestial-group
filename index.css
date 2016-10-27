@@ -44,3 +44,24 @@ p{
   /*float: none;*/
   vertical-align: middle;
 }
+
+.box{
+    background-color: transparent;
+    font-size: 40px;
+    display: inline;
+    width: 50px;
+}
+
+input.box{
+  border: 0px solid #000000;
+  border-bottom-width: 1px;
+}
+
+
+.inline{
+  display: inline;
+}
+
+.input-group{
+  display: inline !important;
+}
