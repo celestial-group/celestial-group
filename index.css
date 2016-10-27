@@ -13,10 +13,7 @@ body{
   width:100%;
 }
 
-.container-fluid{
-  width: 100%;
-  position: relative;
-}
+
 
 .col-sm-6{
   width:50%;
