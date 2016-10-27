@@ -179,7 +179,10 @@
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="tooltip"]').tooltip({
+          trigger:'manual'
+        });
+        $('[data-toogle="tooltip"]').tooltip('show');
         $('#fullpage').fullpage({
           navigation: true,
           navigationPosition:'right',
