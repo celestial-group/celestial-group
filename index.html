@@ -193,6 +193,8 @@
 
         var waypoints = $('#calculator').waypoint(function(direction) {
           $('#motorway').focus();
+          $('[data-toggle="tooltip"]').tooltip('show');
+          alert('Calculator');
         });
 
         var motorwayMin = 20;
