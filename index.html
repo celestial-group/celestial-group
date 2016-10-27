@@ -227,13 +227,15 @@
         $('input').keyup(function(){
           var motorwayMin = $('#motorway').val();
           var CBDMin = $('#CBD').val();
+          if($.isNumeric(motorwayMin)&&$.isNumeric(CBDMin)){
+            var result = 0.3*motorwayMin + 0.5*CBDMin;
+            $('#result').text(Math.round(result*10)/10);
 
-          var result = 0.3*motorwayMin + 0.5*CBDMin;
-          $('#result').text(Math.round(result*10)/10);
+            var yearResult = result*365*2;
 
-          var yearResult = result*365*2;
-
-          updateYearResult(minToDay(yearResult),yearResult);
+            updateYearResult(minToDay(yearResult),yearResult);
+          }
+          
 
         });
         $('.numbersOnly').keyup(function () { 
