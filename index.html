@@ -14,7 +14,7 @@
     <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
     <script src="/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="/bower_components/isInViewport/lib/isInViewport.min.js"></script>
-    <script src="/bower_components/video.js/dist/ie8/videojs-ie8.min.js"></script>
+-    <script src="/bower_components/video.js/dist/ie8/videojs-ie8.min.js"></script>
   </head>
   <body>
     <div id="fullpage" class="">
@@ -37,7 +37,7 @@
           </div>
         </div>
       </div>
-      <div class="section" id="blend-zone">
+      <!--div class="section" id="blend-zone">
         <div class="container-fluid">
           <div class="time">8:30-8:32</div>
           <div class="row">
@@ -55,7 +55,7 @@
           </div>
           </div>
         </div>
-      </div>
+      </div-->
       <div class="section" id="dynamic-toll">
         <div class="container-fluid">
           <div class="time">8:32-8:38</div>
@@ -133,8 +133,7 @@
           <div class="row">
             <div class="col-sm-6">
               <p>
-                Because Driverless Zone marks the end of the Manually Driven Vehicles/Manually Driven Mode,
-                a special Parking Lot is created for the drivers to switch the mode
+                Because Driverless Zone marks the end of the Manually Driven Vehicles/Manually Driven Mode,                a special Parking Lot is created for the drivers to switch the mode
                 to fully automatic or park their cars and transit to autonomous public
                 transport.
               </p>
@@ -179,9 +178,9 @@
         $('#fullpage').fullpage({
           navigation: true,
           navigationPosition:'right',
-          navigationTooltips:['Introduction','Blend Zone','Dynamic Toll','AIM','Intersection','Parking Lot','Calculator'],
+          navigationTooltips:['Introduction','Dynamic Toll','AIM','Intersection','Parking Lot','Calculator'],
           showActiveTooltip: true,
-          sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FFCC00','#7BAABE','#4BBFC3','#1bbc9b']
+          sectionsColor: ['#1bbc9b', '#7BAABE', '#FFCC00','#7BAABE','#4BBFC3','#1bbc9b']
         });
 
         var waypoints = $('#').waypoint(function(direction) {
