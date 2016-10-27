@@ -63,6 +63,7 @@ p{
     font-size: 40px;
     display: inline;
     width: 100px;
+    text-align:right;
 }
 
 input.box{
