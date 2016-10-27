@@ -78,3 +78,9 @@ input.box{
 .input-group{
   display: inline !important;
 }
+
+.tooltip-inner {
+    max-width: 350px;
+    /* If max-width does not work, try using width instead */
+    width: 100px; 
+}
