@@ -45,7 +45,6 @@
              It means that John's fancy new car still needs to obey the current traffic rules like
            traffic lights and stop signs. Not the most fancy way to use a driverless car,
            but as more driverless zones gradually roll out, the situation will be much better.
-            <a href='#'>Click to see how the driverless zones are managed</a>
           </p>
           </div>
         <div class="col-sm-6">
@@ -168,7 +167,7 @@
           sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#FFCC00','#7BAABE','#4BBFC3','#1bbc9b']
         });
 
-        var waypoints = $('#handler-only').waypoint(function(direction) {
+        var waypoints = $('#').waypoint(function(direction) {
           notify(this.element.id + ' hit')
         });
 
