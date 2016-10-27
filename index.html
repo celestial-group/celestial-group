@@ -198,6 +198,11 @@
 
         var motorwayMin = 20;
         var CBDMin = 10;
+        
+        var currentTime = {
+          motorwayMin:motorwayMin,
+          CBDMin:CBDMin
+        };
 
         var minToDay = function(min){
           var res={};
@@ -217,7 +222,7 @@
         };
 
 
-        var result = 0.3*motorwayMin + 0.5*CBDMin;
+        var result = 0.3*currentTime.motorwayMin + 0.5*currentTime.CBDMin;
         $('#result').text(Math.round(result*10)/10);
 
         var yearResult = result*365*2;
@@ -227,16 +232,24 @@
         $('input').keyup(function(){
           var motorwayMin = $('#motorway').val();
           var CBDMin = $('#CBD').val();
-          if($.isNumeric(motorwayMin)&&$.isNumeric(CBDMin)){
-            var result = 0.3*motorwayMin + 0.5*CBDMin;
+          var update = false;
+          if($.isNumeric(motorwayMin)){
+            currentTime.motorwayMin=motorwayMin;
+            update=true;
+          }
+          
+          if($.isNumeric(CBDMin)){
+            currentTime.CBDMin=CBDMin;
+            update=true;
+          }
+          if(update===true){
+            var result = 0.3*currentTime.motorwayMin + 0.5*currentTime.CBDMin;
             $('#result').text(Math.round(result*10)/10);
 
             var yearResult = result*365*2;
-
             updateYearResult(minToDay(yearResult),yearResult);
           }
           
-
         });
         $('.numbersOnly').keyup(function () { 
           this.value = this.value.replace(/[^0-9\.]/g,'');
