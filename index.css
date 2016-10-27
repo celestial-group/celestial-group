@@ -13,14 +13,14 @@ body{
   width:100%;
 }
 
+
 .time .large{
-  font-size:72px;
+  font-size:60px !important;
 }
 
-.time .middle{
-  font-size:60px;
+.time .small{
+  font-size:32px !important;
 }
-
 
 .col-sm-6{
   width:50%;
