@@ -158,11 +158,11 @@
           <div class="col-sm-8">
             <p class="inline">If you spend</p>
               <div class="input-group">
-                <input type="text" class="box" placeholder="20" aria-describedby="basic-addon2" id="motorway">
+                <input type="text" class="box" placeholder="20" aria-describedby="basic-addon2" id="motorway"  data-toggle="tooltip" data-placement="top" title="Clcik and change it to your own">
               </div>
             <p class="inline">minutes driving on motorway and</p>
             <div class="input-group">
-              <input type="text" class="box" placeholder="10" aria-describedby="basic-addon2" id="CBD">
+              <input type="text" class="box" placeholder="10" aria-describedby="basic-addon2" id="CBD" data-toggle="tooltip" data-placement="top" title="Clcik and change it to your own">
             </div>
             <p class="inline"> minutes driving in CBD <b>per</b> trip, then you can save</p>
             <span class="box" id="result"></span>
@@ -179,6 +179,7 @@
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
         $('#fullpage').fullpage({
           navigation: true,
           navigationPosition:'right',
