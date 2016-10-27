@@ -14,12 +14,14 @@ body{
 }
 
 
-.large{
+.time-large{
   font-size:60px !important;
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.small{
+.time-small{
   font-size:32px !important;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .col-sm-6{
